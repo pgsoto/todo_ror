@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <p class="notice"><%= notice %></p>                                                                                                                 
+  <p class="alert"><%= alert %></p> 
+  
+  
+  <% if account_signed_in? %>
+    <%= link_to "Cerrar Sesión", destroy_account_session_path, method: :delete %> 
+  <% else %>
+    <%= link_to "Iniciar Sesión", new_account_session_path, method: :get %> 
+  <% end %>
+  
+  <%= yield %>
+
+</body>
+</html>
