@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: [:development]
+# Use PostgreSQL as the database for Active Record
+gem 'pg', group: [:production]
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -16,7 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'devise'
 
-gem 'faker', group: [:development]
+gem 'faker'
 
 gem 'will_paginate', '~> 3.1.0'
 
